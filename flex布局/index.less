@@ -1,0 +1,30 @@
+#mixin_func(){
+    width: 100px;
+    height: 200px;
+}
+
+
+
+#outer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    #p{
+        width: 100px;
+        height: 200px;
+    }
+    #box1{
+        #mixin_func();
+        background-color: aqua;
+    }
+    #box2:extend(#outer #p){
+        background-color: bisque;
+    }
+    #box3{
+        #mixin_func();
+        background-color: red;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 200px;      //宽度为200px
+    }
+}

@@ -1,0 +1,24 @@
+@w: 100px;
+@h:100px;
+
+.mixin_func1(@width){        //定义混合函数
+    width: @width;
+    height: 2 * @width;
+    background-color: aqua;
+}
+
+.mixin_func2(@w:100px, @h:200px, @color:red){       //可以定义参数的默认值
+    width: @w;
+    height: @h;
+    background-color: @color;
+}
+
+.box1{
+    .box2{
+        .mixin_func1(@w);        //使用混合函数
+    }
+    .box3{
+        .mixin_func2();     //由于函数定义了默认值，因此调用的时候可以不传值
+        
+    }
+}  

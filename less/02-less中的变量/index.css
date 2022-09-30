@@ -1,0 +1,16 @@
+.box1 .box2 {
+  width: 200px;
+  height: 100px;
+  background-color: aliceblue;
+}
+.box1 .box3 {
+  width: 200px;
+  height: 400px;
+  background-color: aqua;
+}
+.box1 .box4 {
+  width: 200px;
+  height: 200px;
+  background-image: url("images/2/plugin.jpg");
+  background-size: cover;
+}

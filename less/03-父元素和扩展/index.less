@@ -1,0 +1,46 @@
+@width: 100px;
+@height: 100px;
+
+.box2{
+    width: 100px;
+    height: @height;
+    background-color: yellow;
+}
+
+.box1{
+    .box2{
+        width: 100px;
+        height: @height;
+        background-color: antiquewhite;
+    }
+    .box3:extend(.box1 .box2){      //注意这里必须加上 .box1， 使用 后代选择器  
+        &:hover{
+            background-color: red;
+        }
+    }
+    .box7:extend(.box2){            //继承的是外面的 .box2   颜色为yellow
+
+    }
+    .box4{
+        width: @width;
+        height: @height;
+        background-color: green;
+        &:hover{        //可以理解为当前元素， this，这里就是 .box4
+            background-color: yellow;
+        }
+    }
+    .box5{
+        .box2();        //相当于直接复制了box2的样式.mixin混入
+        background-color: red;      //继承之后可以修改自己的样式
+    }
+
+    .mixin(){       //.minxin() 带有括号 是专门用于混入的，该样式不生效   .mixin生效
+        width: 100px;
+        height: @height;
+        background-color: antiquewhite;
+    }
+
+    .box6{
+        .mixin();       //使用了mixin混入
+    }
+}

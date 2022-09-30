@@ -1,0 +1,27 @@
+#outer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#outer #p,
+#outer #box2 {
+  width: 100px;
+  height: 200px;
+}
+#outer #box1 {
+  width: 100px;
+  height: 200px;
+  background-color: aqua;
+}
+#outer #box2 {
+  background-color: bisque;
+}
+#outer #box3 {
+  width: 100px;
+  height: 200px;
+  background-color: red;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 200px;
+}
+/*# sourceMappingURL=./index.css.map */

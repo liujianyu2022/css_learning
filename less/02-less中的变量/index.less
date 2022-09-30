@@ -1,0 +1,26 @@
+@height: 100px; //定义变量
+@width: 200px;
+@b: box3; //类名的定义
+@images: "images/2";        //作为路径
+
+.box1 {
+    .box2 {
+        width: @width;
+        height: @height;
+        background-color: aliceblue;
+    }
+
+    .@{b} {
+        //类名变量需要使用 {} 包起来    @{变量名}
+        width: @width;
+        height: @height + 300px;
+        background-color: aqua;
+    }
+
+    .box4 {
+        width: @width;
+        height: $width; //直接引用 width 的属性值
+        background-image: url("./@{images}/plugin.jpg"); //作为路径的一部分使用，也需要 @{变量名}
+        background-size: cover;
+    }
+}
