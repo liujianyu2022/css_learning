@@ -13,6 +13,9 @@
 .box1 .box3:hover {
   background-color: red;
 }
+.box1 .box7:hover {
+  background-color: red;
+}
 .box1 .box4 {
   width: 100px;
   height: 100px;
